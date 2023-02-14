@@ -9,8 +9,10 @@
   </div>
 
   <pre>
-    <p>hello</p>
-    <code [highlight]="code" [languages]="['html', 'css', 'typescript']"></code></pre>
+    <button (click)="copyCodeToClipboard()" id="copy-button">copy</button>
+    <code [highlight]="code" [languages]="['html', 'css', 'typescript']">
+      
+    </code></pre>
 
   <button (click)="changeTheme()">Change theme</button>
 

@@ -40,6 +40,12 @@ export class BlockcodeComponent implements OnInit {
       this.blockcodeData[this.selectedTab as keyof IBlockcodeComponent]!;
   }
 
+  copyCodeToClipboard(): void {
+    navigator.clipboard.writeText(this.code);
+
+    alert('copied to clipboard');
+  }
+
   changeTheme(): void {
     this.currentTheme =
       this.currentTheme === stackoverflowLight

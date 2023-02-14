@@ -1,10 +1,18 @@
-pre code.hljs {
+pre {
+  display: flex;
+  flex-direction: column;
+}
+
+#copy-button {
+  align-self: end;
+  position: relative;
+  top: 20px;
+}
+
+code.hljs {
   display: block;
   overflow-x: auto;
-  padding: 1em;
-}
-code.hljs {
-  padding: 3px 5px;
+  padding: 10px 5px;
 } /*!
   Theme: StackOverflow Dark
   Description: Dark theme as used on stackoverflow.com
