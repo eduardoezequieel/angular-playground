@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="tab-container">
+    <app-tab-button
+      *ngFor="let tab of tabs"
+      [tabName]="tab"
+      [activeTab]="tab === selectedTab"
+      (selectedTabName)="setSelectedTab($event)"
+    ></app-tab-button>
+  </div>
+
+  <pre>
+    <p>hello</p>
+    <code [highlight]="code" [languages]="['html', 'css', 'typescript']"></code></pre>
+
+  <button (click)="changeTheme()">Change theme</button>
+
+  <ng-content></ng-content>
+</div>

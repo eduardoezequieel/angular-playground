@@ -1,0 +1,22 @@
+@mixin border-button($color) {
+  box-shadow: 0px 0px 0px 2px $color;
+  -webkit-box-shadow: 0px 0px 0px 2px $color;
+  -moz-box-shadow: 0px 0px 0px 2px $color;
+}
+
+button {
+  background-color: white;
+  cursor: pointer;
+  border: 0;
+  padding: 10px 20px;
+  @include border-button(#cfcfcf);
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: #f8f8f8;
+  }
+
+  &.active {
+    background-color: #ffcdcd;
+  }
+}
